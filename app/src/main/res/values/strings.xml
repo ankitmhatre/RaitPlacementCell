@@ -19,4 +19,7 @@
     <string name="login_activity_newaccount_text">Sign in to your Rait Placement account. </string>
     <string name="login_activity_loginfail_text_pwmissing">Type the password for this account.</string>
     <string name="ui_activity_title">Sign-in</string>
+    <string name="channel_name">Dashboard</string>
+    <string name="channel_description">This is a notification channel for all the dashboard notifications on placement portal</string>
+    <string name="CHANNEL_ID">dashboard</string>
 </resources>

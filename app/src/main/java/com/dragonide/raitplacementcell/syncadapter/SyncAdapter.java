@@ -18,7 +18,6 @@ package com.dragonide.raitplacementcell.syncadapter;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.AbstractThreadedSyncAdapter;
@@ -48,6 +47,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import androidx.core.app.NotificationCompat;
+
 /**
  * Define a sync adapter for the app.
  * <p>
@@ -58,38 +59,15 @@ import java.net.URL;
  * SyncService.
  */
 class SyncAdapter extends AbstractThreadedSyncAdapter {
-    public static final String TAG = "SyncAdapter";
-
-    /**
-     * URL to fetch content from during a sync.
-     * <p>
-     * <p>This points to the Android Developers Blog. (Side note: We highly recommend reading the
-     * Android Developer Blog to stay up to date on the latest Android platform developments!)
-     */
-    private static final String FEED_URL = "http://android-developers.blogspot.com/atom.xml";
-
-    /**
-     * Network connection timeout, in milliseconds.
-     */
+    public static final String LOG = "SyncAdapteraaaa";
     private static final int NET_CONNECT_TIMEOUT_MILLIS = 15000;  // 15 seconds
-
-    /**
-     * Network read timeout, in milliseconds.
-     */
     private static final int NET_READ_TIMEOUT_MILLIS = 10000;  // 10 seconds
 
-    /**
-     * Content resolver, for performing database operations.
-     */
     private final ContentResolver mContentResolver;
     String first, second;
-    /**
-     * CONTENT AUTHoRITY
-     */
+
     public final String AUTHORITY = "com.dragonide.raitplacementcell";
-    /**
-     * Project used when querying content provider. Returns all known fields.
-     */
+
     private static final String[] PROJECTION = new String[]{
             FeedContract.Entry._ID,
             FeedContract.Entry.COLUMN_NAME_ENTRY_ID,
@@ -125,18 +103,19 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
     @Override
     public void onPerformSync(Account account, Bundle extras, String authority,
                               ContentProviderClient provider, SyncResult syncResult) {
+        Log.d(LOG, "Beginning network synchronization");
         first = LocalDb.getInstance(getContext()).getTopMostItemCOntent();
+        Log.d(LOG, "Last title of the item in " + first);
         ContentResolver.setIsSyncable(account, AUTHORITY, 1);
 
-        Log.d("SyncAdapter1", "Beginning network synchronization");
+
         AccountManager am = AccountManager.get(getContext());
         String uName = account.name;
         String pass = am.getPassword(account);
         String batch = am.getUserData(account, "batch");
         String sessID = null;
 
-        Log.d("asdfgh", "username" + " - " + uName + "\n" + "password" + " - " + pass + "\n" + "batch" + " - " + batch);
-
+        Log.d(LOG, "username" + " - " + uName + "\n" + "password" + " - " + pass + "\n" + "batch" + " - " + batch);
 
 
         try {
@@ -146,37 +125,30 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                     .execute();
 
             Document document = res.parse();
-            //   Log.d("asdfgh", document.html());
+            //   Log.d(LOGasdfgh", document.html());
             sessID = res.cookie("PHPSESSID");
-            //     Log.d("asdfgh", "asdfgh");
+            //     Log.d(LOGasdfgh", "asdfgh");
 
             //SECTION 2
             Document pers = Jsoup.connect("http://rait.placyms.com/personal.php").cookie("PHPSESSID", sessID).get();
             String crn = pers.select("input[name=crn]").first().attr("value");
             String fname = pers.select("input[name=fn]").first().attr("value");
 
-            //  Log.d("asdfgh", crn);
+            //  Log.d(LOGasdfgh", crn);
             PrefUtils.setString(getContext(), "roll_no", crn);
             PrefUtils.setString(getContext(), "fname", fname);
+            //postNewNotification();
             getFromServer(document);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Log.d("sesssssss", "3");
-        second = LocalDb.getInstance(getContext()).getTopMostItemCOntent();
-        Log.d("TTop Dbsdf ", second);
-        Log.d("New Dbsdf ", first);
+        Log.d(LOG, "3");
 
 
         Intent i = new Intent(Constants.FINISH_SYNC);
         getContext().sendBroadcast(i);
 
         getContext().getContentResolver().notifyChange(Constants.BASE_URI, null, true);
-
-        if (!first.equals(second)) {
-            Log.d("syncadapter", "posting a notification"  );
-            postNewNotification();
-        }
 
 
     }
@@ -193,14 +165,18 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                         i,
                         PendingIntent.FLAG_UPDATE_CURRENT
                 );
-// Create a notification and set a number to associate with it.
-        Notification notification = new Notification.Builder(getContext())
-                .setContentTitle("Rait Placement Cell")
-                .setContentIntent(resultPendingIntent)
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getContext(), "dashboard")
+                .setSmallIcon(R.drawable.placyms)
+                .setContentTitle(getContext().getString(R.string.app_name))
                 .setContentText(LocalDb.getInstance(getContext()).getTopMostItemTitle())
-                .setSmallIcon(R.drawable.placyms).build();
+                .setContentIntent(resultPendingIntent)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+//
 // Issue the notification.
-        mNotificationManager.notify(notificationID, notification);
+        mNotificationManager.notify(notificationID, mBuilder.build());
         PrefUtils.setString(getContext(), "notif", LocalDb.getInstance(getContext()).getTopMostItemTitle());
     }
 
@@ -208,7 +184,8 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
      * Get date from the server and put it into the database everytime system performs sync operation
      */
 
-    public void getFromServer(Document mdoc) {
+    @SuppressWarnings("")
+    private void getFromServer(Document mdoc) {
 
 
         Elements notification_rows;
@@ -222,7 +199,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         }*/
 
         LocalDb.getInstance(getContext()).deleteALl();
-        Log.d("drtbase1", "deleted"  );
+        Log.d(LOG, "deletedAll - Inside get FRom Server");
         for (Element e : notification_rows) {
             String final_title;
             try {
@@ -235,7 +212,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                     String title_in_html = e.html();
                     String[] split_title = title_in_html.split("<br>");
                     final_title = split_title[0];
-                    //  Log.d("testtttttt",title_in_html);
+                    //  Log.d(LOGtesttttttt",title_in_html);
                     notif_array[q++] = final_title; //e.select("b").first().text();
 
 
@@ -244,15 +221,27 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                 String content = content_in_html.replaceAll("(https://[^<>[:space:]]+[[:alnum:]/])", "<a href=\"$1\">$1</a>");
 
                 content = content.replaceAll("(http://[^<>[:space:]]+[[:alnum:]/])", "<a href=\"$1\">$1</a>");
-                if(final_title.length() >1 && content.length() >1) {
+                if (final_title.length() > 1 && content.length() > 1) {
                     LocalDb.getInstance(getContext()).addNotifications(final_title, content);
                 }
+
+
             } catch (Exception exception) {
                 exception.printStackTrace();
 
 
             }
 
+        }
+        second = LocalDb.getInstance(getContext()).getTopMostItemCOntent();
+        Log.d(LOG, "New Title in the database = " + second);
+
+        if (!first.equals(second)) {
+            Log.d(LOG, "posting a notification");
+            postNewNotification();
+        } else {
+            first = null;
+            second = null;
         }
 
 

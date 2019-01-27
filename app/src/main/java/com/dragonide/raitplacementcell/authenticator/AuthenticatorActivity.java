@@ -334,6 +334,10 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
 
 
         if (success) {
+
+
+            //setPriodic syncing
+
             if (!mConfirmCredentials) {
                 finishLogin(authToken);
             } else {
