@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+    <string-array name="gender_array">
+
+        <item>- Select a gender -</item>
+        <item>Male</item>
+        <item>Female</item>
+
+
+    </string-array>
+
+    <string-array name="gender_values">
+
+        <item></item>
+        <item>Male</item>
+        <item>Female</item>
+
+
+    </string-array>
+    <string-array name="departent_array">
+        <item>- Select department -</item>
+        <item>Computer Engineering</item>
+        <item>Electronics Engineering</item>
+        <item>Instrumentation Engineering</item>
+        <item>Information Technology Engineering</item>
+        <item>Electronics &amp; Telecommunication Engineering</item>
+    </string-array>
+    <string-array name="department_values">
+        <item>- Select department -</item>
+        <item>Computer Engineering</item>
+        <item>Electronics Engineering</item>
+        <item>Instrumentation Engineering</item>
+        <item>Information Technology Engineering</item>
+        <item>Electronics &amp; Telecommunication Engineering</item>
+    </string-array>
+    <string-array name="xboardarray">
+
+        <item>- Select Board -</item>
+        <item>Not Applicable</item>
+        <item>SSC</item>
+        <item>CBSE</item>
+        <item>ICSE</item>
+        <item>Other</item>
+
+
+    </string-array>
+    <string-array name="xboardarrayvalues">
+
+        <item>- Select Board -</item>
+        <item>NA</item>
+        <item>SSC</item>
+        <item>CBSE</item>
+        <item>ICSE</item>
+        <item>Other</item>
+
+    </string-array>
+    <string-array name="beunivselection">
+        <item>Mumbai University</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="beunivvalue">
+        <item>MU</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="becollegeselection">
+        <item>RamRao Adik Institute of Technology</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="becollegevalue">
+        <item>RAIT</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="applicableornot">
+        <item>Applicable</item>
+        <item>Not Applicable</item>
+    </string-array>
+    <string-array name="applicableornotvalue">
+        <item>A</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="xiiboardarray">
+
+        <item>- Select Board -</item>
+        <item>Not Applicable</item>
+        <item>HSC</item>
+        <item>CBSE</item>
+        <item>ICSE</item>
+        <item>Other</item>
+
+
+    </string-array>
+    <string-array name="xiiboardarrayvalues">
+
+        <item>- Select Board -</item>
+        <item>NA</item>
+        <item>HSC</item>
+        <item>CBSE</item>
+        <item>ICSE</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="dboardarray">
+
+        <item>- Select Board -</item>
+        <item>Not Applicable</item>
+        <item>MSBTE</item>
+        <item>Other</item>
+
+
+    </string-array>
+    <string-array name="dboardarrayvalues">
+
+        <item>- Select Board -</item>
+        <item>NA</item>
+        <item>MSBTE</item>
+        <item>Other</item>
+
+    </string-array>
+    <array name="mdcolor_400">
+        <item name="red_400" type="color">#e84e40</item>
+        <item name="pink_400" type="color">#ec407a</item>
+        <item name="purple_400" type="color">#ab47bc</item>
+        <item name="deep_purple_400" type="color">#7e57c2</item>
+        <item name="indigo_400" type="color">#5c6bc0</item>
+        <item name="blue_400" type="color">#738ffe</item>
+        <item name="light_blue_400" type="color">#29b6f6</item>
+        <item name="cyan_400" type="color">#26c6da</item>
+        <item name="teal_400" type="color">#26a69a</item>
+        <item name="green_400" type="color">#2baf2b</item>
+        <item name="light_green_400" type="color">#9ccc65</item>
+        <item name="lime_400" type="color">#d4e157</item>
+        <item name="yellow_400" type="color">#ffee58</item>
+        <item name="orange_400" type="color">#ffa726</item>
+        <item name="deep_orange_400" type="color">#ff7043</item>
+        <item name="brown_400" type="color">#8d6e63</item>
+        <item name="grey_400" type="color">#bdbdbd</item>
+        <item name="blue_grey_400" type="color">#78909c</item>
+    </array>
+</resources>

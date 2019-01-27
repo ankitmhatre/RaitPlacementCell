@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:paddingStart="28dp"
+    android:paddingLeft="28dp"
+    android:paddingEnd="28dp"
+    android:paddingRight="28dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:weightSum="1"
+
+    tools:context=".authenticator.AuthenticatorActivity"
+    tools:showIn="@layout/activity_login">
+
+    <LinearLayout
+        android:id="@+id/upper_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_login_et"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:textSize="16sp" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_login_et"
+            android:hint="@string/pass_hint"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:textSize="16sp"
+            app:passwordToggleEnabled="true" />
+
+        <Spinner
+            android:id="@+id/batch_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_rounded_spinner"
+
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+
+            android:paddingRight="20dp"
+
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upper_lay"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="18dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/b_login"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_drawable"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="handleLogin"
+                android:text="Log In"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/signUp_inLogin_button"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="handleLogin"
+                android:background="@drawable/sign_up_drawable"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Sign up"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        android:layout_above="@id/upper_lay"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/ad" />
+    <!--   <ImageView
+           android:id="@+id/imageView3"
+           android:layout_marginTop="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:srcCompat="@drawable/logo" />
+   -->
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_databse"
+            android:icon="@drawable/ic_view_list"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_personal"
+            android:icon="@drawable/ic_person"
+            android:title="Edit personal Info" />
+        <item
+            android:id="@+id/nav_academic"
+            android:icon="@drawable/ic_school"
+            android:title="Edit Academic Info" />
+
+        <item
+            android:id="@+id/nav_additional"
+            android:icon="@drawable/ic_account_balance"
+            android:title="Edit Additional Info" />
+
+        <!-- <item
+             android:id="@+id/nav_logout"
+             android:icon="@drawable/ic_power_settings_new"
+             android:title="Logout" />-->
+
+    </group>
+
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/print_resumen"
+            android:icon="@drawable/ic_insert_drive_file"
+            android:title="Print resume" />
+    </group>
+    <item
+        android:id="@+id/logout_button"
+        android:icon="@drawable/ic_power_settings_new"
+        android:title="Logout" />
+
+
+</menu>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Class X"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/class_x" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Class XII"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/class_xii" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Diploma"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/diploma_acads" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E / M.E. Details"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_me_acads" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 1"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_1" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 2"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_2" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 3"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 4"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 5"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 6"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_6" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 7"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_7" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="B.E. Semester 8"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/be_sem_8" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="M.E. Semester 1"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/me_sem_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="M.E. Semester 2"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/me_sem_2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="M.E. Semester 3"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/me_sem_3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="M.E. Semester 4"
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/me_sem_4" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="A.T.K.T."
+                        android:textColor="#0D47A1"
+
+                        android:textSize="28sp" />
+
+                    <include layout="@layout/extra_acads" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#fff"
+                        android:gravity="center"
+
+
+                        android:maxLines="1"
+
+                        android:textSize="28sp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/okayfooetracads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/updateButtonaacads"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#05a43a"
+                android:text="Update Info"
+                android:textColor="#fff" />
+
+
+            <Button
+                android:id="@+id/resetuttonacads"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#fff"
+                android:text="Reset"
+
+                android:textColor="#000" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

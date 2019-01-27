@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:id="@+id/someIF">
+
+    <!-- Menu Item Image -->
+
+    <!-- Badge Count -->
+    <TextView
+        android:id="@+id/actionbar_notifcation_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:gravity="center"
+
+        android:textColor="#fff" />
+
+</RelativeLayout>

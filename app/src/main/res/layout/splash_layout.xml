@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="center"
+    android:background="#1e92ff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView2l"
+        android:layout_width="160dp"
+
+        android:layout_height="160dp"
+android:layout_marginTop="150dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ad"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ProgressBar
+        android:id="@+id/asadadllsad"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+
+        android:progressDrawable="@drawable/progree_circle"
+        android:progressTint="#fff"
+        android:progressTintMode="add" />
+
+
+    <TextView
+        android:id="@+id/textViewl"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="R.A.I.T. Placement Cell \n v1.0"
+        android:textColor="#88caf0"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
