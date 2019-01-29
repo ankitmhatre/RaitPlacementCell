@@ -153,7 +153,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
 
     }
 
-    public void postNewNotification() {
+    private void postNewNotification() {
         NotificationManager mNotificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         int notificationID = 1;
         Intent i = new Intent(getContext(), HomeActivity.class);

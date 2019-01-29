@@ -24,8 +24,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import com.google.android.material.textfield.TextInputEditText;
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +38,7 @@ import com.dragonide.raitplacementcell.PrefUtils;
 import com.dragonide.raitplacementcell.R;
 import com.dragonide.raitplacementcell.SignupActivity;
 import com.dragonide.raitplacementcell.client.NetworkUtilities;
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -52,6 +51,8 @@ import java.net.Socket;
 import java.net.SocketAddress;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
+
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 
 
 /**
@@ -506,7 +507,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
 
             fullpage = response;
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
-                    android.R.layout.simple_spinner_item, displayvalues);
+                    R.layout.spinner_item, displayvalues);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             batch_spinner.setAdapter(adapter);
             super.onPostExecute(response);
