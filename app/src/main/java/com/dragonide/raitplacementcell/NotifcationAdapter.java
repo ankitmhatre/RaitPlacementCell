@@ -63,9 +63,8 @@ public class NotifcationAdapter extends ArrayAdapter<NotifItem> {
 
         textView.setMaxLines(2);
 
-            /*YOUR CHOICE OF COLOR*/
-        textView.setTextColor(Color.BLACK);
-        textView.setTypeface(null, Typeface.BOLD);
+
+
         String a = null;
         try {
             a = data.get(position).getN_title().charAt(0) + "";

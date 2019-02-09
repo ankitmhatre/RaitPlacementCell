@@ -508,7 +508,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
             fullpage = response;
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
                     R.layout.spinner_item, displayvalues);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(R.layout.spinner_item);
             batch_spinner.setAdapter(adapter);
             super.onPostExecute(response);
             progressDialog.hide();

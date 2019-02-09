@@ -16,10 +16,10 @@
     android:layout_width="match_parent"
     android:layout_height="76dp"
     android:orientation="horizontal"
-    android:paddingBottom="@dimen/padding_list_row"
     android:paddingLeft="?listPreferredItemPaddingLeft"
+    android:paddingTop="@dimen/padding_list_row"
     android:paddingRight="?listPreferredItemPaddingRight"
-    android:paddingTop="@dimen/padding_list_row">
+    android:paddingBottom="@dimen/padding_list_row">
 
 
     <RelativeLayout
@@ -55,10 +55,12 @@
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:singleLine="true"
             android:gravity="center_vertical"
             android:maxLines="1"
             android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#000"
+
             android:textSize="15sp"
 
 
@@ -67,9 +69,11 @@
         <TextView
             android:id="@+id/t2"
             android:layout_width="match_parent"
+            android:textColor="#666"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:maxLines="2"
+
             android:paddingLeft="10dp"
 
 
